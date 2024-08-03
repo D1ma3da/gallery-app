@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Cormorant SC;
+  font-weight: normal;
+  src: url(./fonts/CormorantSC-Medium.ttf);
+}
+@font-face {
+  font-family: Inter-Light;
+  font-weight: normal;
+  src: url(./fonts/Inter-Light.otf);
+}
+@font-face {
+  font-family: Inter-Bold;
+  font-weight: normal;
+  src: url(./fonts/Inter-Bold.otf);
+}
+@font-face {
+  font-family: Inter-Medium;
+  font-weight: normal;
+  src: url(./fonts/Inter-Medium.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  transition: 0.5s;
+}
+.container.dark {
+  background: #121212;
+}

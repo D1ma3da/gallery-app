@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  transition: 0.5s;
+  @media (min-width: 320px) {
+    width: 280px;
+  }
+  @media (min-width: 768px) {
+    width: 700px;
+  }
+  @media (min-width: 1024px) {
+    width: 960px;
+  }
+  @media (min-width: 1366px) {
+    width: 1280px;
+  }
+}
+//логотип
+.logo {
+  margin-top: 30px;
+  cursor: pointer;
+}
+//иконка переключения темы
+.toggle_icon {
+  margin-top: 30px;
+  padding: 9px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+//иконка переключения в светлой теме
+.light .toggle_icon:hover {
+  background-color: #f3f3f3;
+}
+//темная тема
+.dark {
+  .toggle_icon {
+    background-color: #1a1818;
+  }
+  .toggle_icon:hover {
+    background-color: #1b1b1b;
+  }
+  .navbar {
+    background: #121212;
+  }
+}

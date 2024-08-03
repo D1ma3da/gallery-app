@@ -1,0 +1,63 @@
+.Search {
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 768px) {
+    width: 690px;
+  }
+  @media (min-width: 1024px) {
+    width: 960px;
+  }
+  @media (min-width: 1366px) {
+    width: 1270px;
+  }
+}
+//блок поиска
+.search-box {
+  position: relative;
+  border-radius: 3px;
+  width: 275px;
+  height: 36px;
+  border: 1px #dedede solid;
+  margin: 62px auto 0 auto;
+  display: flex;
+  align-items: center;
+  input {
+    font-family: "Inter-Light";
+    padding: 6px;
+    margin-left: 8px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: #9c9c9c;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    max-width: 200px;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+  img {
+    cursor: pointer;
+    padding-left: 16px;
+  }
+  .clear-button {
+    cursor: pointer;
+    padding-left: 70px;
+    @media (max-width: 767px) {
+      padding-left: 10px;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 336px;
+    margin-right: 0;
+  }
+  @media (min-width: 1366px) {
+    margin-right: 0;
+  }
+}
+//блок поиска в темной теме
+:global(.dark) .search-box {
+  border: none;
+  background: #1a1818;
+}

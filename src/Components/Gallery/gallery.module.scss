@@ -1,0 +1,232 @@
+//стили для группы элементов списка
+.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 0 !important;
+  @media (min-width: 320px) {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    width: 690px;
+  }
+  @media (min-width: 1024px) {
+    width: 960px;
+  }
+  @media (min-width: 1366px) {
+    width: 1270px;
+  }
+}
+//стили для элемента списка
+.list-group-item {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  margin-bottom: 20px;
+  @media (min-width: 320px) {
+    width: 100%;
+    height: 270px;
+  }
+  @media (min-width: 768px) {
+    width: 48%;
+    height: 290px;
+  }
+  @media (min-width: 1024px) {
+    width: 49%;
+  }
+  @media (min-width: 1366px) {
+    width: 32.4%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+}
+
+.list-group-item:hover img {
+  transform: scale(1.06);
+}
+//оверлей текста на изображении
+.overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 80%;
+  height: 28%;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 1);
+  padding: 10px;
+  text-align: left;
+  transition: transform 0.5s ease;
+  h3 {
+    font-family: "Cormorant SC";
+  }
+  p {
+    font-family: "Inter-Bold";
+  }
+  @media (max-width: 1366px) {
+    height: 22%;
+  }
+}
+
+.text-container {
+  position: relative;
+  height: 120%;
+  overflow: hidden;
+  h3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.text {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.list-group-item:hover .text {
+  transform: translateY(140%);
+}
+
+.new-text {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.list-group-item:hover .new-text {
+  transform: translateX(0%);
+}
+//псевдоэлемент перед текстом
+.overlay:before {
+  content: " ";
+  background: #ab8956;
+  width: 3px;
+  height: 42px;
+  border: 2px;
+  margin-top: 3%;
+  left: 0;
+  position: absolute;
+  @media (min-width: 320px) {
+    margin-top: 0;
+  }
+  @media (min-width: 1366px) {
+    margin-top: 2%;
+    height: 50px;
+  }
+}
+
+.text,
+.new-text {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  h3,
+  p {
+    margin: 0;
+    margin-left: 15px;
+  }
+  h3 {
+    color: #dedede;
+  }
+  p {
+    color: #9b8768;
+  }
+  @media (min-width: 320px) {
+    margin-top: -5px;
+    h3 {
+      font-size: 10px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+  @media (min-width: 768px) {
+    margin-top: -8px;
+    h3 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+  @media (min-width: 1367px) {
+    margin-top: -3px;
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+//стили для блока, когда ничего не найдено
+.not_found {
+  padding-top: 60px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  h3 {
+    color: #dedede;
+    font-family: "Inter-Medium";
+    font-size: 16px;
+  }
+  p {
+    color: #9c9c9c;
+    font-family: "Inter-Light";
+    font-size: 14px;
+  }
+  @media (min-width: 767px) {
+    width: 640px;
+  }
+  @media (min-width: 1366px) {
+    width: 1265px;
+  }
+}
+//светлая тема
+.light {
+  .overlay {
+    background: rgb(255, 255, 255);
+  }
+  .text {
+    h3 {
+      color: #121212;
+    }
+    p {
+      color: #9b4b4b;
+    }
+  }
+  .new-text {
+    h3 {
+      color: #121212;
+    }
+    p {
+      color: #9b4b4b;
+    }
+  }
+  .overlay:before {
+    background: #9b4b4b;
+  }
+  .not_found {
+    h3 {
+      color: #575757;
+    }
+    p {
+      color: #9c9c9c;
+    }
+  }
+  li {
+    border: 0;
+  }
+}
+//темная тема
+.dark li {
+  border: 0;
+}
